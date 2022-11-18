@@ -1,0 +1,26 @@
+.home-page {
+  &__slogan-banner {
+    min-height: 100vh;
+    background-image: url("../../img/slogan.webp"),
+      linear-gradient(180deg, rgba(0, 0, 0, 1) 55%, rgba(232, 232, 232) 100%);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+.slider-wrap {
+  &__title {
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 2px 3px rgba(210 210 210 / 75%);
+    background-color: rgb(146, 146, 146);
+    background-clip: text;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page__slogan-banner {
+    background-size: 100%;
+  }
+}

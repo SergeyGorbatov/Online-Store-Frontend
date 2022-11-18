@@ -1,0 +1,44 @@
+.sliders {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  .slider {
+    background-color: white;
+    margin: 20px;
+    padding: 0 40px;
+    border-radius: 25px;
+  }
+
+  &__all-products {
+    align-self: flex-end;
+    margin-right: 25px;
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: 10px 25px;
+    outline: none;
+    border: 2px solid;
+    border-radius: 5px;
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgb(229, 93, 135) 0%,
+        rgb(95, 195, 228) 100%
+      );
+      color: white;
+      border: none;
+      margin: 2px 25px 2px 2px;
+    }
+  }
+}
+
+.slick-prev:before {
+  color: black;
+}
+.slick-next:before {
+  color: black;
+}

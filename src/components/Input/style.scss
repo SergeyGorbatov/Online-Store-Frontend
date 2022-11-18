@@ -1,0 +1,44 @@
+.input-container {
+  display: flex;
+
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+  .input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    border: 0;
+    font-size: 18px;
+    outline: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .label {
+    color: rgb(101, 101, 123);
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+
+  .input:focus ~ .label,
+  .input:not(:placeholder-shown) ~ .label {
+    transform: translateY(-15px) translateX(-8px) scale(0.75);
+  }
+
+  .input:not(:placeholder-shown) ~ .label {
+    color: rgb(128, 128, 151);
+  }
+}
+
+.form__errors {
+  width: 307px;
+  margin-top: 10px;
+  color: rgb(255, 0, 0);
+  font-weight: 400;
+}

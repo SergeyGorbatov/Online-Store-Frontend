@@ -1,0 +1,129 @@
+.product-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 0;
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  border-bottom: 2px solid white;
+  transition: 0.2s linear;
+
+  &:hover {
+    border-color: #bca480;
+
+    .product-wrap__actions {
+      bottom: 0;
+    }
+  }
+
+  .product-wrap {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    &__image {
+      display: block;
+      width: 160px;
+      height: 190px;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      left: 2px;
+      bottom: -35%;
+      width: 98%;
+      background: rgba(59, 62, 67, 0.75);
+      transition: 0.3s linear;
+      border-radius: 20px;
+
+      &:focus-within {
+        bottom: 0;
+      }
+
+      button {
+        text-decoration: none;
+        float: left;
+        color: white;
+        padding: 5px 0;
+        transition: 0.2s linear;
+        width: 33%;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(59, 62, 67, 0.85);
+      }
+
+      button:hover {
+        cursor: pointer;
+        transition: all 1s ease;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      button:before {
+        font-family: "FontAwesome";
+      }
+    }
+
+    &__actions-active {
+      bottom: 0;
+    }
+
+    &__add-to-cart {
+      &::before {
+        content: url(../../img/buy.png);
+      }
+    }
+
+    &__favorite {
+      &::before {
+        content: url(../../img/favorite.png);
+      }
+    }
+
+    &__quantity {
+      color: white;
+      font-weight: 300;
+      font-size: 39px;
+      margin: 0px;
+    }
+  }
+
+  .product-info {
+    padding-bottom: 10px;
+    font-family: "Noto Sans", sans-serif;
+
+    &__price {
+      font-weight: bold;
+      color: #bca480;
+    }
+
+    &__title {
+      margin: 0 0 10px 0;
+      font-family: "Noto Sans", sans-serif;
+
+      .product-info__name {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(232, 232, 232);
+
+        &:hover {
+          color: white;
+          transition: 0.5s;
+          background: linear-gradient(
+            135deg,
+            rgb(229, 93, 135) 0%,
+            rgb(95, 195, 228) 100%
+          );
+        }
+      }
+    }
+  }
+}

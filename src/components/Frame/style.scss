@@ -1,0 +1,10 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.frame__content {
+  margin-top: 50px;
+}

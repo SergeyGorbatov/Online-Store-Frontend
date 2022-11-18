@@ -1,0 +1,148 @@
+.basket-wrap {
+  min-height: 110vh;
+
+  .basket-empty {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .tumbleweed {
+    animation: 10s linear 0s normal infinite rot;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 30px;
+
+    .place-order-wraper {
+      position: sticky;
+      bottom: 0;
+      background: black;
+      opacity: 0.9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .place-order {
+        background-color: #009100;
+        margin: 40px 0;
+        padding: 25px 100px;
+        font-weight: 700;
+
+        &:hover {
+          background-color: #00b300;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+.cards-basket {
+  display: flex;
+  background-color: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__count {
+    align-self: center;
+    font-weight: 300;
+    font-size: 25px;
+  }
+
+  &__delete {
+    align-self: center;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 5px 1px;
+      border-radius: 5px;
+    }
+  }
+
+  &__header {
+    align-self: center;
+    word-wrap: break-word;
+    width: 250px;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0 20px;
+  }
+
+  &__logo {
+    height: 200px;
+    width: 200px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__price {
+    align-self: center;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards-basket__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cards-basket__header,
+  .cards-basket__price,
+  .cards-basket__count {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .cards-basket {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-basket__logo {
+    align-self: center;
+  }
+
+  .basket-wrap .place-order {
+    padding: 20px 80px;
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(100vw, 0) rotate(720deg);
+  }
+}

@@ -1,0 +1,92 @@
+.header {
+  height: 50px;
+  background: linear-gradient(
+    135deg,
+    rgb(229, 93, 135) 0%,
+    rgb(95, 195, 228) 100%
+  );
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  transition: background-color 0.3s ease 0s;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__logo-store {
+        height: 33px;
+        filter: brightness(10);
+        padding: 0 20px;
+      }
+
+      &__logo-menu {
+        background-image: url(../../img/menu.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 33px;
+        width: 20px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        padding: 0 20px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .user-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__logo-bag {
+        background-image: url(../../img/bag.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50px;
+        padding: 0 30px 0 0;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__logo-user {
+        background-image: url(../../img/user.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50px;
+        padding: 0 30px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        filter: brightness(10);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.subsequent-header {
+  background: rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 600px) {
+  .header .content {
+    margin: 0 10px;
+  }
+}
