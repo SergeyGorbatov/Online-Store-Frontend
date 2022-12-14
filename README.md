@@ -14,3 +14,7 @@
 + ***MUI***
 + ***Вспомогательные либы вроде реактовской формы, lodash.debounce, карусели, yup для валидации и т.д.***
  
+
+
+https://user-images.githubusercontent.com/103434908/207712165-8ecd79a4-e1c4-4378-80b0-1b888bc67a2d.mp4
+
